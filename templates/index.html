@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
+
+<html>
+  <head>
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="{{ url_for('static', filename='bg.jpg') }}"
+        alt="Background Image"
+      />
+      <h1>Login</h1>
+      <form action="{{ url_for('validar_login') }}" method="POST">
+        <label for="username"><i class="fas fa-user"></i></label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Usuário"
+        /><br />
+
+        <label for="password"><i class="fas fa-lock"></i></label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Senha"
+        /><br />
+
+        <input type="submit" value="Entrar" />
+      </form>
+    </div>
+  </body>
+</html>
